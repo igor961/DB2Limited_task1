@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5%;
+  background: #01134E;
+  z-index: 2;
+}
+#menu>ul {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 21vh;
+}
+#menu>ul>li {
+  display: inline-block;
+  width: 100%;
+}
+#menu>ul>li>img {
+  margin: 1em 1.5vw;
+  width: 1.5vw;
+}
+
+#top_stripe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #eee;
+}
+
+.custom_menu {
+  display: block;
+}
+
+.custom_menu li {
+  list-style-type: none;
+}
+
+.hier_line {
+  flex: 8 3 auto; 
+  padding-left: 1.5em;
+}
+
+.hier_line li {
+  float: left; 
+  padding: 0 10px;
+}
+
+.hier_line li:not(:first-child)::before {
+  content: url(pics/arrow.svg);
+  margin-right: 15px;
+}
+
+#logo {
+  z-index: 3;
+  width: 3%;
+  padding: 1%;
+}
+
+#user {
+  padding-right: 1em;
+}
+
+#user>figure::after {
+  content: url(pics/arrow2.svg);
+  margin-left: 0.3em;
+  cursor: pointer;
+}
+
+#user>figure>* {
+  float: left;
+  margin: 0 0.3em;
+}
