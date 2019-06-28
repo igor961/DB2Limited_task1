@@ -3,10 +3,16 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 #container {
   width: 100%;
   height: 100vh;
   position: relative;
+  background: #F9FAFC;
 }
 
 #menu {
@@ -22,12 +28,17 @@
   position: relative;
   height: 100%;
   width: 100%;
-  top: 21vh;
+  top: 19vh;
 }
 #menu>ul>li {
   display: inline-block;
-  width: 100%;
+  width: 100%; 
+  border-left: 3px solid transparent;
 }
+#menu>ul>li:last-child {
+  border-left: 3px solid #0AD69C;
+}
+
 #menu>ul>li>img {
   margin: 1em 1.5vw;
   width: 1.5vw;
@@ -85,4 +96,55 @@
 #user>figure>* {
   float: left;
   margin: 0 0.3em;
+}
+
+main {
+  position: absolute;
+  top: 10vh;
+  left: 5%;
+  right: 0;
+  margin: 10vh;
+  box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
+  border-radius: 4px;
+}
+
+#dialogs {
+  float: left;
+}
+
+#dialogs>ul>li {
+  position: relative;
+  width: 350px;
+  height: 6vh;
+  padding: 20px;
+  clear: both;
+
+}
+#dialogs>ul>li:nth-child(3) {
+  box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
+}
+
+#dialogs>ul>li>time {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#dialogs>ul>li>img {
+  float: left;
+  margin: 0 1em;
+}
+#dialogs>ul>li>mark {
+  background: #fff;
+  font-size: 14pt;
+  line-height: 19px;
+}
+
+#dialogs>ul>li>p {
+  margin-top: 0.3em;
+  color: #252F48;
+  font-size: 12pt;
+  line-height: 18px;
+}
+
+#messages_container {
 }
