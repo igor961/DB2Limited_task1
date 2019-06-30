@@ -31,9 +31,16 @@ body {
   top: 19vh;
 }
 #menu>ul>li {
+  position: relative;
   display: inline-block;
   width: 100%; 
   border-left: 3px solid transparent;
+}
+
+.notification_number {
+  position: absolute;
+  top: 0;
+  right: 0;  
 }
 
 #menu>ul>li:last-child {
@@ -151,9 +158,20 @@ main>* {
   margin: 0 1em;
 }
 #dialogs>ul>li>mark {
+  position: relative;
   background: #fff;
   font-size: 16px;
   line-height: 19px;
+}
+
+#dialogs>ul>li:first-child>mark::after {
+  content: url(pics/silent.svg);
+  padding-left: 10px;  
+}
+
+#dialogs>ul>li .online {
+  position: absolute;
+  content: url(pics/online.svg);
 }
 
 #dialogs>ul>li>p {
@@ -219,7 +237,7 @@ main>* {
   padding: 10px;
   width: 2.5vh; 
   height: 2.5vh;
-/*  box-sizing: border-box;*/
+  /*  box-sizing: border-box;*/
   align-self: center;
 }
 
@@ -239,7 +257,7 @@ main>* {
   position: relative;
   background: #F7F9FC;
   max-width: 300px;
-  
+
   margin: 10px 10px 0 10px;
   padding: 10px;
 }
@@ -254,29 +272,29 @@ main>* {
   align-self: flex-end;
 }
 
-  #messages_container .message.message-from::before {
-    position: absolute;
-    left: -10px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    content: "";
-    border-style: solid;
-    border-width: 0 0 10px 10px;
-    border-color: transparent transparent #F7F9FC transparent;  }
-  
-  #messages_container .message.message-to::after {
-    position: absolute;
-    right: -10px;
-    bottom: 0;
-    transform: rotate(90deg);
-    width: 0;
-    height: 0;
-    content: "";
-    border-style: solid;
-    border-width: 0 0 10px 10px;
-    border-color: transparent transparent #F7F9FC transparent;
-  }
+#messages_container .message.message-from::before {
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  border-width: 0 0 10px 10px;
+border-color: transparent transparent #F7F9FC transparent;  }
+
+#messages_container .message.message-to::after {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  transform: rotate(90deg);
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  border-width: 0 0 10px 10px;
+  border-color: transparent transparent #F7F9FC transparent;
+}
 
 .message>p {
   display: block;
