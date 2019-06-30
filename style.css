@@ -99,6 +99,7 @@ body {
 }
 
 main {
+  display: flex;
   position: absolute;
   top: 10vh;
   left: 5%;
@@ -109,7 +110,7 @@ main {
 }
 
 #dialogs {
-  float: left;
+  
 }
 
 #dialogs>ul>li {
@@ -122,6 +123,10 @@ main {
 }
 #dialogs>ul>li:nth-child(3) {
   box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
+}
+
+main>* {
+  background: #fff;
 }
 
 #dialogs>ul>li>time {
@@ -147,4 +152,48 @@ main {
 }
 
 #messages_container {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+
+#messages_container>header, #messages_container>article, #messages_container>footer {
+  width: 100%;
+}
+
+#messages_container>article {
+   flex: auto; 
+}
+
+#messages_container input {
+  width: 100%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 3.5em;
+  border: 0;
+  letter-spacing: 0.5px; 
+}
+
+#messages_container input::placeholder {
+  color: #252F48;
+  opacity: 0.2;
+}
+
+#messages_container>header {
+  display: flex;
+  border-bottom: 1px solid #F5F6F9;
+}
+
+#messages_container>footer { 
+  box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.146541);
+}
+
+#search_btn {
+  padding: 15px;
+  height: 100%;
+  box-sizing: border-box;  
 }
