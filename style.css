@@ -126,7 +126,7 @@ main {
   box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
 }
 
-#dialogs>ul>li>time {
+time {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -141,8 +141,8 @@ main>* {
 
 #dialogs>ul>li>time {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
 }
 #dialogs>ul>li>img {
   float: left;
@@ -150,14 +150,14 @@ main>* {
 }
 #dialogs>ul>li>mark {
   background: #fff;
-  font-size: 14pt;
+  font-size: 16px;
   line-height: 19px;
 }
 
 #dialogs>ul>li>p {
   margin-top: 0.3em;
   color: #252F48;
-  font-size: 12pt;
+  font-size: 14px;
   line-height: 18px;
 }
 
@@ -199,6 +199,7 @@ main>* {
 }
 
 #messages_container>footer { 
+  display: flex;
   box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.146541);
 }
 
@@ -206,4 +207,90 @@ main>* {
   padding: 15px;
   height: 100%;
   box-sizing: border-box;  
+}
+
+.message_actions {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  width: 36px; 
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.message_actions:last-child {
+  box-shadow: 0px 0px 15px rgba(153, 163, 174, 0.259256);
+  border-radius: 7px;
+  margin: 5px 15px;
+}
+
+#messages_container>article {
+  display: flex;
+  flex-direction: column;
+}
+
+#messages_container .message {
+  position: relative;
+  background: #F7F9FC;
+  max-width: 300px;
+  
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+}
+
+#messages_container .message.message-from {
+  border-radius: 5px 5px 5px 0;
+  align-self: flex-start;
+}
+
+#messages_container .message.message-to {
+  border-radius: 5px 5px 0 5px;
+  align-self: flex-end;
+}
+
+  #messages_container .message.message-from::before {
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #F7F9FC transparent;  }
+  
+  #messages_container .message.message-to::after {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    transform: rotate(90deg);
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #F7F9FC transparent;
+  }
+
+.message>p {
+  display: block;
+  margin-right: 50px;
+}
+
+.message>time {
+  position: absolute;
+  bottom: 10px;
+  right:  10px;
+}
+.msg_sender {
+  align-self: flex-end;
+}
+.msg_sender_container {
+  display: flex
+}
+
+.msg_sender {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
