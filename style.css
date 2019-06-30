@@ -33,14 +33,22 @@ body {
 #menu>ul>li {
   position: relative;
   display: inline-block;
-  width: 100%; 
+  width: 100%;
   border-left: 3px solid transparent;
 }
 
-.notification_number {
+.notificated::after { 
   position: absolute;
-  top: 0;
-  right: 0;  
+  top: 0.7vw;
+  right: 1.3vw;
+  width: 1.2vw;
+  height: 1.2vw;
+  content: "1";
+  border-radius: 2vw;
+  background-color: #2A74DB;
+  font-size: 1vw;
+  text-align: center;
+  color: white;
 }
 
 #menu>ul>li:last-child {
@@ -48,7 +56,7 @@ body {
 }
 
 #menu>ul>li>img {
-  margin: 1em 1.5vw;
+  margin: 1vw 1.5vw;
   width: 1.5vw;
 }
 
