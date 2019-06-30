@@ -162,7 +162,8 @@ main>* {
 }
 
 #messages_container {
-  width: 100%; 
+  width: 100%;
+  max-height: 67vh;
   display: flex;
   flex-direction: column;
 }
@@ -227,6 +228,7 @@ main>* {
 #messages_container>article {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 #messages_container .message {
@@ -284,9 +286,10 @@ main>* {
 }
 .msg_sender {
   align-self: flex-end;
+  margin: 0 10px 0 10px;
 }
 .msg_sender_container {
-  display: flex
+  display: flex;
 }
 
 .msg_sender {
