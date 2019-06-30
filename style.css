@@ -197,27 +197,30 @@ main>* {
 
 #messages_container>header {
   display: flex;
+  height: 8vh;
   border-bottom: 1px solid #F5F6F9;
 }
 
 #messages_container>footer { 
   display: flex;
   box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.146541);
+  min-height: 8vh;
+  max-height: 14vh;
 }
 
 #search_btn {
-  padding: 15px;
+  padding: 2vh;
   height: 100%;
   box-sizing: border-box;  
 }
 
 .message_actions {
   display: block;
-  margin: 5px 0;
   padding: 10px;
-  width: 36px; 
-  height: 36px;
-  box-sizing: border-box;
+  width: 2.5vh; 
+  height: 2.5vh;
+/*  box-sizing: border-box;*/
+  align-self: center;
 }
 
 .message_actions:last-child {
