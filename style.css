@@ -82,6 +82,7 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid #eee;
+  background: #fff;
 }
 
 .custom_menu {
